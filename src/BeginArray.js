@@ -1,11 +1,11 @@
-define('begin:Array', function (expors, require, module) {
+define('begin:Array', function (require, exports, module) {
     var begin = require('begin:begin');
 
     // 寄托到begin对象上
     begin.Array = BeginArray;
 
     // 导出
-    module.expors = BeginArray;
+    module.exports = BeginArray;
 
     /**
      * 数组包裹

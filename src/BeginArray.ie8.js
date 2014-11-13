@@ -1,4 +1,4 @@
-define('begin:Array.ie8', function (expors, require, module) {
+define('begin:Array.ie8', function (require, exports, module) {
     var BeginArray = require('begin:Array');
 
     /**

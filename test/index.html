@@ -14,10 +14,36 @@
     <body>
         <script type="text/javascript">
             var assert = require('test:assert');
+            var BeginArray = require('begin:array');
+            var BeginArray = require('begin:array');
             var begin = require('begin:begin');
 
-            assert.ok(begin, 'begini is ok');
+            // begin
+            assert.ok(begin, 'begin is ok');
             assert.equal(typeof begin, 'function', 'begin is a function');
+
+            // begin.Array
+            assert.ok(begin.Array, 'begin.Array is ok');
+            assert.ok(begin.Array.prototype.forEach, 'begin.Array.prototype.forEach is ok');
+
+            // 实例测试
+            var abcArr = ['a', 'b', 'c'];
+
+            begin(abcArr).forEach(function (item, index, arr) {
+                if (index === 0) {
+                    assert.equal(item, 'a');
+                }
+
+                if (index === 1) {
+                    assert.equal(item, 'b');
+                }
+
+                if (index === 2) {
+                    assert.equal(item, 'c');
+                }
+
+                assert.equal(arr, abcArr);
+            });
         </script>
     </body>
 </html>

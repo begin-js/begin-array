@@ -15,9 +15,11 @@
     <body>
         <script type="text/javascript">
             var assert = require('test:assert');
-            var BeginArray = require('begin:array');
-            var BeginArray = require('begin:array');
+            var BeginArray = require('begin:Array');
             var begin = require('begin:begin');
+
+            // IE8下需要require下，执行一次模块函数
+            require('begin:Array.ie8');
 
             // begin
             assert.ok(begin, 'begin is ok');
